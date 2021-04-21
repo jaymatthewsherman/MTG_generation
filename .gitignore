@@ -1,0 +1,5 @@
+.ipynb_checkpoints
+model.bin
+word2vec.model
+AllPrintings.json
+cards.csv
