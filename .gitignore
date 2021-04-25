@@ -3,3 +3,10 @@ model.bin
 word2vec.model
 AllPrintings.json
 cards.csv
+training.txt
+val.txt
+logs
+results
+
+# editors
+.vscode
