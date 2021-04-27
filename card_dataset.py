@@ -27,4 +27,4 @@ class CardDataset(torch.utils.data.Dataset):
         return len(self.cards)
     
     def __getitem__(self, idx):
-        return torch.tensor(self.tokenizer.encode(self.cards[idx]).ids)
+        return torch.tensor(self.tokenizer.encode(self.cards[idx]))

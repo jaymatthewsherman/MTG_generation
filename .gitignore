@@ -13,6 +13,7 @@ vocab.json
 merges.txt
 tokenizer.json
 __pycache__
+models
 
 # editors
 .vscode
