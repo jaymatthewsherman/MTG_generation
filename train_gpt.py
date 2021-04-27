@@ -61,7 +61,7 @@ def main(model_name):
 
     args = TrainingArguments(
         output_dir='./results',          # output directory
-        num_train_epochs=3,              # total number of training epochs
+        num_train_epochs=25,             # total number of training epochs
         per_device_train_batch_size=1,   # batch size per device during training
         per_device_eval_batch_size=1,    # batch size for evaluation
         warmup_steps=500,                # number of warmup steps for learning rate scheduler
@@ -87,5 +87,5 @@ def main(model_name):
     trainer.evaluate()
 
 if __name__ == "__main__":
-    model_name = "gpt2-epochs3"
+    model_name = "gpt2-epochs25"
     main(model_name)

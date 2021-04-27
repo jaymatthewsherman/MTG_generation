@@ -1,24 +1,11 @@
-import pandas as pd
-from tqdm.notebook import tqdm
-import random
-from sklearn.model_selection import train_test_split
-from card_dataset import CardDataset
-from tokenizers import Tokenizer, ByteLevelBPETokenizer
-from tokenizers.models import BPE
-from tokenizers.trainers import BpeTrainer
-from tokenizers.pre_tokenizers import Whitespace
-from tokenizers.normalizers import Lowercase, NFD, StripAccents, Sequence
-from transformers import CTRLLMHeadModel, CTRLConfig, CTRLTokenizer
-from transformers import GPT2LMHeadModel, GPT2Config, GPT2Tokenizer
-from transformers import Trainer, TrainingArguments
-from transformers import DataCollatorForLanguageModeling
+from transformers import GPT2LMHeadModel, GPT2Tokenizer
 from transformers import pipeline
 
 class GPTGenerator:
     def __init__(self, model_name):
         self.model_name = model_name
-        self.model = GPT2LMHeadModel.from_pretrained(f"./{self.model_name}")
-        self.tokenizer = GPT2Tokenizer.from_pretrained(f"./{self.model_name}-tokenizer")
+        self.model = GPT2LMHeadModel.from_pretrained(f"./models/{self.model_name}")
+        self.tokenizer = GPT2Tokenizer.from_pretrained(f"./models/{self.model_name}-tokenizer")
 
         self.generator = pipeline("text-generation", model=self.model, tokenizer=self.tokenizer)
         self.end_token = "</card>\""
@@ -44,4 +31,4 @@ class GPTGenerator:
 if __name__ == "__main__":
     model_name = "gpt2-epochs3"
     card_generator = GPTGenerator(model_name)
-    print(card_generator.generate("uncommon", "W", "Enchantment", "MW"))
+    print(card_generator.generate("rare", "G", "Sorcery", "MG"))
