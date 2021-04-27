@@ -1,0 +1,26 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.8.5",
+    "heartbeatAt": "2021-04-26T22:49:44.003005",
+    "startedAt": "2021-04-26T22:49:40.484736",
+    "docker": null,
+    "gpu": "GeForce GTX 1650 SUPER",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [
+        "-f",
+        "C:\\Users\\jayma\\AppData\\Roaming\\jupyter\\runtime\\kernel-19c7bde2-615b-4d25-8dd8-43762bc7d022.json"
+    ],
+    "state": "running",
+    "program": "Senior Year Northeastern University/Machine Learning/mtg_generation/RulesTextGeneration.ipynb",
+    "root": "D:/Senior Year Northeastern University/Machine Learning/mtg_generation",
+    "git": {
+        "remote": "https://github.com/jaymatthewsherman/MTG_generation.git",
+        "commit": "2acac24791845a4f39319450b33cc6dd11a2b265"
+    },
+    "email": "jaymatthewsherman@gmail.com",
+    "host": "DESKTOP-5M60JP3",
+    "username": "jayma",
+    "executable": "C:\\Users\\jayma\\miniconda3\\python.exe"
+}
