@@ -3,3 +3,17 @@ model.bin
 word2vec.model
 AllPrintings.json
 cards.csv
+training.txt
+val.txt
+logs
+results
+wandb
+runs
+vocab.json
+merges.txt
+tokenizer.json
+__pycache__
+models
+
+# editors
+.vscode
