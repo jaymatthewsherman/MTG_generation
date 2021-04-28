@@ -46,7 +46,16 @@ def process_rules_text(text, name):
     return text
 
 def present_image(st, card):
-    st.write(card)
+    st.markdown("**Name: **{}".format(card["name"]))
+    st.markdown("**Type: **{}".format(card["type"]))
+    st.markdown("**Color: **{}".format(card["color"]))
+    st.markdown("**Mana Cost: **{}".format(card["mana_cost"]))
+    if card["type"] == "Creature":
+        st.markdown("**Power: **{}".format(card["power"]))
+        st.markdown("**Toughness: **{}".format(card["toughness"]))
+    elif card["type"] == "Planeswalker":
+        st.markdown("**Loyalty: **{}".format(card["loyalty"]))
+    st.markdown("**Rules Text: **{}".format(card["text"]))
 
 def concatenate_values(card):
     attributes = [ card['rarity'], card['color'], card['type'], card['mana_cost'] ]
