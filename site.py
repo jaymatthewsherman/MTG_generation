@@ -64,7 +64,7 @@ if st.button("Generate"):
         card = generate_nontext(train_data, DEPENDENCY_GRAPH, specified_values)
         card["name"] = name_selection if name_selection != "" else "Name"
         card["text"] = generate_text(card)
-        card["text"] = process_rules_text(card["text"], card["name"]).capitalize()
+        card["text"] = process_rules_text(card["text"], card["name"])
         present_image(st, card)
     except IndexError as e:
         st.markdown("**Such a card has never been seen before (absent in training set). "
